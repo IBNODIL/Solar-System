@@ -11,7 +11,7 @@ import jupiterTexture from '../img/jupiter.jpg';
 import saturnTexture from '../img/saturn.jpg';
 import saturnRingTexture from '../img/saturn ring.png';
 import uranusTexture from '../img/uranus.jpg';
-import uranusRingTexture from '../img/uranus ring.png';
+import uranusRingTexture from '../img/uranus-ring.png';
 import neptuneTexture from '../img/neptune.jpg';
 import plutoTexture from '../img/pluto.jpg';
 
@@ -64,6 +64,8 @@ function createPlanete(size, texture, position, ring) {
     });
     const mesh = new THREE.Mesh(geo, mat);
     const obj = new THREE.Object3D();
+    const ambientLight = new THREE.AmbientLight(0x333333);
+    obj.add(ambientLight);
     obj.add(mesh);
     if(ring) {
         const ringGeo = new THREE.RingGeometry(

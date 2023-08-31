@@ -597,7 +597,7 @@ var _saturnRingPng = require("../img/saturn ring.png");
 var _saturnRingPngDefault = parcelHelpers.interopDefault(_saturnRingPng);
 var _uranusJpg = require("../img/uranus.jpg");
 var _uranusJpgDefault = parcelHelpers.interopDefault(_uranusJpg);
-var _uranusRingPng = require("../img/uranus ring.png");
+var _uranusRingPng = require("../img/uranus-ring.png");
 var _uranusRingPngDefault = parcelHelpers.interopDefault(_uranusRingPng);
 var _neptuneJpg = require("../img/neptune.jpg");
 var _neptuneJpgDefault = parcelHelpers.interopDefault(_neptuneJpg);
@@ -636,6 +636,8 @@ function createPlanete(size, texture, position, ring) {
     });
     const mesh = new _three.Mesh(geo, mat);
     const obj = new _three.Object3D();
+    const ambientLight = new _three.AmbientLight(0x333333);
+    obj.add(ambientLight);
     obj.add(mesh);
     if (ring) {
         const ringGeo = new _three.RingGeometry(ring.innerRadius, ring.outerRadius, 32);
@@ -703,7 +705,7 @@ window.addEventListener("resize", function() {
     renderer.setSize(window.innerWidth, window.innerHeight);
 });
 
-},{"three":"ktPTu","three/examples/jsm/controls/OrbitControls.js":"7mqRv","../img/stars.jpg":"5N0TG","../img/sun.jpg":"deOhw","../img/mercury.jpg":"7pTlO","../img/venus.jpg":"4RxGU","../img/earth.jpg":"1J7yy","../img/mars.jpg":"in1Ah","../img/jupiter.jpg":"eHIf7","../img/saturn.jpg":"aDBTE","../img/saturn ring.png":"6VZpS","../img/uranus.jpg":"858CL","../img/uranus ring.png":"se7rr","../img/neptune.jpg":"2rgJB","../img/pluto.jpg":"iKlIx","@parcel/transformer-js/src/esmodule-helpers.js":"cWslO"}],"ktPTu":[function(require,module,exports) {
+},{"three":"ktPTu","three/examples/jsm/controls/OrbitControls.js":"7mqRv","../img/stars.jpg":"5N0TG","../img/sun.jpg":"deOhw","../img/mercury.jpg":"7pTlO","../img/venus.jpg":"4RxGU","../img/earth.jpg":"1J7yy","../img/mars.jpg":"in1Ah","../img/jupiter.jpg":"eHIf7","../img/saturn.jpg":"aDBTE","../img/saturn ring.png":"6VZpS","../img/uranus.jpg":"858CL","../img/neptune.jpg":"2rgJB","../img/pluto.jpg":"iKlIx","@parcel/transformer-js/src/esmodule-helpers.js":"cWslO","../img/uranus-ring.png":"8fyHn"}],"ktPTu":[function(require,module,exports) {
 /**
  * @license
  * Copyright 2010-2023 Three.js Authors
@@ -31538,15 +31540,15 @@ module.exports = require("1738498b4e4f5ba3").getBundleURL("e6MYJ") + "saturn rin
 },{"1738498b4e4f5ba3":"3vgqZ"}],"858CL":[function(require,module,exports) {
 module.exports = require("4fbe99ec3f0a964d").getBundleURL("e6MYJ") + "uranus.03f8200b.jpg" + "?" + Date.now();
 
-},{"4fbe99ec3f0a964d":"3vgqZ"}],"se7rr":[function(require,module,exports) {
-module.exports = require("e3f5deb3613f73c0").getBundleURL("e6MYJ") + "uranus ring.bb04d0b4.png" + "?" + Date.now();
-
-},{"e3f5deb3613f73c0":"3vgqZ"}],"2rgJB":[function(require,module,exports) {
+},{"4fbe99ec3f0a964d":"3vgqZ"}],"2rgJB":[function(require,module,exports) {
 module.exports = require("5050cc453027cd72").getBundleURL("e6MYJ") + "neptune.69b29d20.jpg" + "?" + Date.now();
 
 },{"5050cc453027cd72":"3vgqZ"}],"iKlIx":[function(require,module,exports) {
 module.exports = require("e5c0fb037be8ff1b").getBundleURL("e6MYJ") + "pluto.cc2d7afe.jpg" + "?" + Date.now();
 
-},{"e5c0fb037be8ff1b":"3vgqZ"}]},["dEOBt","goJYj"], "goJYj", "parcelRequire699e")
+},{"e5c0fb037be8ff1b":"3vgqZ"}],"8fyHn":[function(require,module,exports) {
+module.exports = require("ba6beb3654c60a59").getBundleURL("e6MYJ") + "uranus-ring.6ac7e61b.png" + "?" + Date.now();
+
+},{"ba6beb3654c60a59":"3vgqZ"}]},["dEOBt","goJYj"], "goJYj", "parcelRequire699e")
 
 //# sourceMappingURL=index.64a4978e.js.map
